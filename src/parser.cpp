@@ -18,7 +18,7 @@ MessageParser::MessageParser(const std::string msg)
     if (location_start == string::npos) return;
     size_t location_end = msg.find_first_of(AT_END, location_start);
     if (location_end == string::npos) return;
-    string id_str = msg.substr(location_start + TRIGGER.length(), location_end - location_start - TRIGGER.length());
+    string id_str = msg.substr(location_start + AT_START.length(), location_end - location_start - AT_START.length());
     logging::info("RandomKiller", id_str);
 }
 
