@@ -9,16 +9,15 @@ class MessageParser {
     bool valid_;
     uint32_t start_;
     uint32_t end_;
-    uint32_t step_;
     uint64_t target_;
 
    public:
     MessageParser(const std::string msg);
     ~MessageParser() = default;
+    std::string msg() const;
     bool valid() const;
     uint32_t start() const;
     uint32_t end() const;
-    uint32_t step() const;
     int64_t target() const;
 };
 
